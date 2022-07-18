@@ -7,5 +7,5 @@ RUN yarn build
 
 FROM node:16-alpine
 WORKDIR /code_run_docker
-COPY --from=Builder /code_run_docker .
+COPY --from=Builder /code_run_docker/.next ./next
 CMD npm start
